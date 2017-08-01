@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>push_list_alias</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    [CloudPushSDK listAliases:^(CloudPushCallbackResult *res) {
+        if (res.success) {
+            NSLog(@"List alias success.");
+            &lt;#statements#&gt;
+        } else {
+            NSLog(@"List alias failed, error: %@", res.error);
+            &lt;#statements#&gt;
+        }
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5F43D69C-9DB0-4FC8-AD00-AB6DE4A2BD9E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Push list alias</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>移动推送查询别名 @阿里云</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

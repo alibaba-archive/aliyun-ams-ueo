@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>push_unbind_tag</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    [CloudPushSDK unbindTag:&lt;#Bind Target#&gt; withTags:&lt;#Tag Array#&gt; withAlias:&lt;#Alias#&gt; withCallback:^(CloudPushCallbackResult *res) {
+        if (res.success) {
+            NSLog(@"Unbind tag success.");
+            &lt;#statements#&gt;
+        } else {
+            NSLog(@"Unbind tag failed, error: %@", res.error);
+            &lt;#statements#&gt;
+        }
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>27B73FFB-A698-45F5-B2C7-5155B63D09C9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Push unbind tag</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>移动推送解绑标签 @阿里云</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

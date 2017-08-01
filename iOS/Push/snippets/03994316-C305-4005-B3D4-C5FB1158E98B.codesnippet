@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>push_unbind_account</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    [CloudPushSDK unbindAccount:^(CloudPushCallbackResult *res) {
+        if (res.success) {
+            NSLog(@"Unbind account success.");
+            &lt;#statements#&gt;
+        } else {
+            NSLog(@"Unbind account failed, error: %@", res.error);
+            &lt;#statements#&gt;
+        }
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>03994316-C305-4005-B3D4-C5FB1158E98B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Push unbind account</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>移动推送解绑账号 @阿里云</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

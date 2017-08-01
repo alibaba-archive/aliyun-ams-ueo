@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>push_receive_message</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)registerMessageListener {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onMessageReceived:) name:@"CCPDidReceiveMessageNotification"
+                                               object:nil];
+}
+
+- (void)onMessageReceived:(NSNotification *)notification {
+    CCPSysMessage *message = [notification object];
+    NSString *title = [[NSString alloc] initWithData:message.title encoding:NSUTF8StringEncoding];
+    NSString *body = [[NSString alloc] initWithData:message.body encoding:NSUTF8StringEncoding];
+    NSLog(@"Receive a message, title: %@, body: %@", title, body);
+    &lt;#statements#&gt;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>897E8862-F5A2-4694-B6A2-00455FF6E2EC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Push receive message</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>移动推送消息接收监听 @阿里云</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
