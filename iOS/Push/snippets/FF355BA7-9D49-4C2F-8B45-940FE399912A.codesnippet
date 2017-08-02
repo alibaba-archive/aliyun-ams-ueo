@@ -63,6 +63,31 @@
     }
     completionHandler();
 }
+
+/* 处理iOS 10.0+通知 */
+- (void)handleiOS10Notification:(UNNotification *)notification {
+    UNNotificationRequest *request = notification.request;
+    UNNotificationContent *content = request.content;
+    NSDictionary *userInfo = content.userInfo;
+    // 通知时间
+    NSDate *noticeDate = notification.date;
+    // 通知标题
+    NSString *title = content.title;
+    // 通知副标题
+    NSString *subtitle = content.subtitle;
+    // 通知内容
+    NSString *body = content.body;
+    // 通知角标
+    int badge = [content.badge intValue];
+    // 通知清零
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    // 通知自定义参数
+    NSString *ext = [userInfo valueForKey:&lt;#Your Key#&gt;];
+    // 通知打开回执上报
+    [CloudPushSDK sendNotificationAck:userInfo];
+    &lt;#statements#&gt;
+}
+
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>FF355BA7-9D49-4C2F-8B45-940FE399912A</string>
@@ -77,6 +102,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
