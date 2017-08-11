@@ -1,8 +1,8 @@
-# HTTPDNS AndoridStudio Live Templates
+# HTTPDNS AndroidStudio LiveTemplates
 
 ## 安装
 
-在AndroidStudio中选择`File->import settings`,导入[httpdns_settings.jar](http://gitlab.alibaba-inc.com/alicloud-ams/ams-doc/raw/master/SDK/LiveTemplate/assets/httpdns_settings.jar)文件。
+在AndroidStudio中选择`File->import settings`,导入[httpdns_settings.jar](https://github.com/aliyun/aliyun-ams-ueo/raw/master/Android/Httpdns/assets/httpdns_settings.jar)文件。
 
 ## 移除
 
