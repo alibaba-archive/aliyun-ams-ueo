@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>httpdns_init</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// 初始化HTTPDNS
+// 设置AccoutID
+HttpDnsService *httpdns = [[HttpDnsService alloc] initWithAccountID:&lt;#Your account ID#&gt;];
+//鉴权方式初始化
+//HttpDnsService *httpdns = [[HttpDnsService alloc] initWithAccountID:0000 secretKey:@"XXXX"];
+
+// 为HTTPDNS服务设置降级机制
+[httpdns setDelegateForDegradationFilter:self];
+// 允许返回过期的IP
+[httpdns setExpiredIPEnabled:YES];
+// 打开HTTPDNS Log，线上建议关闭
+[httpdns setLogEnabled:YES];
+/*
+ *  设置HTTPDNS域名解析请求类型(HTTP/HTTPS)，若不调用该接口，默认为HTTP请求；
+ *  SDK内部HTTP请求基于CFNetwork实现，不受ATS限制。
+ */
+//[httpdns setHTTPSRequestEnabled:YES];
+// edited
+NSArray *preResolveHosts = @[ @"&lt;#host#&gt;"];
+// 设置预解析域名列表
+[httpdns setPreResolveHosts:preResolveHosts];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7A0A4060-4DED-45CC-971C-478D8621986E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>HTTPDNS SDK init</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>HTTPDNS 初始化 @阿里云</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
