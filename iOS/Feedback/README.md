@@ -22,7 +22,7 @@ grep -l "Feedback" ~/Library/Developer/Xcode/UserData/CodeSnippets/* | xargs rm
 
 ### 使用示例
 
-![](assets/feedback_introduce.gif)
+![](assets/introduce.gif)
 
 ## Snippets说明
 
