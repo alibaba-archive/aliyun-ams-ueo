@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>feedback_init</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>YWFeedbackKit *feedbackKit = [[YWFeedbackKit alloc] initWithAppKey:&lt;#AppKey#&gt; appSecret:&lt;#AppSecret#&gt;];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7A0A4060-4DED-45CC-971C-478D8621986E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Feedback SDK init</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Feedback SDK 初始化 @阿里云</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

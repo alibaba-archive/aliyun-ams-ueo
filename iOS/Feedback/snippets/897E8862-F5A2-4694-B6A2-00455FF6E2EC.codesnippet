@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>httpdns_share</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/** 打开用户反馈页面 */
+- (void)openFeedbackViewController {
+    //  初始化方式,或者参考
+    //  self.feedbackKit = [[YWFeedbackKit alloc] initWithAppKey:kAppKey];
+    
+    /** 设置App自定义扩展反馈数据 */
+    self.feedbackKit.extInfo = @{@"loginTime":[[NSDate date] description],
+                                 @"visitPath":@"登陆-&gt;关于-&gt;反馈",
+                                 @"userid":@"yourid",
+                                 @"应用自定义扩展信息":@"开发者可以根据需要设置不同的自定义信息，方便在反馈系统中查看"};
+    
+    __weak typeof(self) weakSelf = self;
+    [self.feedbackKit makeFeedbackViewControllerWithCompletionBlock:^(YWFeedbackViewController *viewController, NSError *error) {
+        if (viewController != nil) {
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+            [weakSelf presentViewController:nav animated:YES completion:nil];
+            
+            [viewController setCloseBlock:^(UIViewController *aParentController){
+                [aParentController dismissViewControllerAnimated:YES completion:nil];
+            }];
+        } else {
+            /** 使用自定义的方式抛出error时，此部分可以注释掉 */
+            NSString *title = [error.userInfo objectForKey:@"msg"]?:@"接口调用失败，请保持网络通畅！";
+            [[TWMessageBarManager sharedInstance] showMessageWithTitle:title
+                                                           description:nil
+                                                                  type:TWMessageBarMessageTypeError];
+        }
+    }];
+    
+    /** 使用自定义的方式抛出error */
+    //    [self.feedbackKit setYWFeedbackViewControllerErrorBlock:^(YWFeedbackViewController *viewController, NSError *error) {
+    //        NSString *title = [error.userInfo objectForKey:@"msg"]?:@"接口调用失败，请保持网络通畅！";
+    //        [[TWMessageBarManager sharedInstance] showMessageWithTitle:title
+    //                                                       description:[NSString stringWithFormat:@"%ld", error.code]
+    //                                                              type:TWMessageBarMessageTypeError];
+    //    }];
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>897E8862-F5A2-4694-B6A2-00455FF6E2EC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>open feedback ViewController</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Feedback SDK 打开反馈模板 @阿里云</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
